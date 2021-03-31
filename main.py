@@ -1,37 +1,18 @@
-import tkinter as tk
-#import player
-import names 
+#Main file which runs everything
+from binarytree import tree, bst, heap, Node, build
+import FindPlayer
+import ages
+import landing
+import singleElim
 
-#Finding a random full name
-#print(names.get_full_name(gender='male'))
+#tree = tree(height=3, is_perfect=True)
+singleElim.singleElim()
+#singleElim.postOrderTrav(tree)
+#ages.getOldest()
 
-root= tk.Tk() # Establishes a root
-
-#Initialises tkinter
-canvas1 = tk.Canvas(root, width = 400, height = 300,  relief = 'raised') 
-canvas1.pack()
-
-# Makes label
-label1 = tk.Label(root, text='Search a player profile')
-label1.config(font=('helvetica', 14))
-canvas1.create_window(200, 25, window=label1) # coordinates of canvas
-
-label2 = tk.Label(root, text='Enter player name:')
-label2.config(font=('helvetica', 10))
-canvas1.create_window(200, 100, window=label2)
-
-entry1 = tk.Entry (root) # Creating a field
-canvas1.create_window(200, 140, window=entry1)
-
-
-  
-def test():
-  print('testing')
-#button1 = tk.Button(text='Search a player profile', command= test, bg='brown', fg='white', font=('helvetica', 9, 'bold'))
-button1 = tk.Button(text='Search a player profile', command= lambda:player.getProfile(entry1), bg='brown', fg='white', font=('helvetica', 9, 'bold'))
-canvas1.create_window(200, 180, window=button1)
-
-root.mainloop()
-
-
-
+#Runs the home window in the landning file
+'''
+root1 = tk.Tk()
+landing.HomeWin(root1, 'landing')
+root1.mainloop()
+'''
